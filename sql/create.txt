@@ -1,0 +1,16 @@
+create database got2;
+
+
+create table charakters2(
+id bigint primary key not null,
+nev varchar(100) not null,
+becenev varchar(100),
+halotte varchar (10),
+portrekep varchar (100) not null,
+kep varchar (100) not null,
+tortenet varchar(255),
+haz varchar (100),
+szervezet varchar (100))
+engine = innodb,
+CHARACTER SET = utf8,
+collate = utf8_hungarian_ci;

@@ -1,0 +1,63 @@
+/*
+@font-face {
+    font-family: Throne; 
+    src: url('../fonts/Game\ of\ Thrones.ttf');
+}*/
+
+body {
+    margin:0;
+    height: 100%;
+    width: 100%;
+  /*  font-family: 'Throne'; */
+    font-size: 12px;
+}
+
+#bal {   
+    width: 80%;
+    background-image: url("../assets/site/mapblue.jpg");   
+}
+
+#jobb {
+    width: 20%;
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: red;   
+    height: 100%;
+    text-align: center;
+    margin:0;
+}
+
+#szereplo {   
+    position: absolute;
+    top:0;   
+}
+
+.elo {
+    display: inline-block;
+    width: 12.5%;
+    text-align: center;
+}
+
+.elo:hover {
+    box-shadow: 0px 0px 10px 5px orange; 
+    border-radius: 10%; 
+}
+
+
+.elo {
+    border-radius: 50%;   
+}
+
+#keresesdiv {  
+    position: absolute; 
+    bottom: 0;
+}
+
+.Ferikep {
+    width: 100%;       
+}
+
+.image {
+    width: 100%;
+}

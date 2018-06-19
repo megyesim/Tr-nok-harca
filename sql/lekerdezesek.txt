@@ -1,0 +1,29 @@
+
+6.a.
+Melyik házba hány élő karakter tartozik, amelyik nem tartozik egy szervezethez sem. Tehát a ház neve, és az adott házba tartozó karakterek száma. (ha él, és egy szervezetnek sem tagja)
+
+SELECT `house`, count(*) FROM `charakters3` WHERE `dead`="" and `organization`="" GROUP by `house` 
+
+6.b.
+Minden olyan karakter minden adata, aki él, és akinek a történetében a „hero” szó szerepel, és még életben van.
+
+SELECT * FROM `charakters3` WHERE `dead`="" and `bio` like "%hero%" 
+
+6.c.	
+Az éjjeli őrség szervezet tagjai, akik életben vannak, és nem tartoznak egy házhoz sem.
+
+SELECT `name` FROM `charakters3` WHERE `dead`="" and `organization`="nightwatch" and `house`="" 
+
+6.d.	
+Azon élő karakterek 
+•	Nevét, mint Hero, 
+•	Alias (bece) nevét, mint Nick Name és 
+•	házát, mint Big House, 
+akik 
+•	életben vannak, 
+•	nem Lannisterek (tehát nem a Lannister házba tartoznak), 
+•	nem a Royalguard tagjai, 
+•	és a történetükben nem szerepel a Lennister vagy a King’s Landing szó.
+
+SELECT `name`, `alias`, `house` FROM `charakters3` WHERE `house`<>"Lannister" and `organization`<>"Royalguard" and (`bio` not like "%Lannister%" or `bio` not like "%King’s Landing%") 
+
